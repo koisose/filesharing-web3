@@ -1,17 +1,13 @@
 import { component$, useVisibleTask$, useSignal   } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-//import { Tooltip } from 'react-tooltip'
-// index.js
-import { NFTStorage } from 'nft.storage'
 
-import Web3 from 'web3'
 
 
 export default component$(() => {
 
   const fileName1 = useSignal("select file to upload");
 
-  useVisibleTask$(async (taskCtx:any) => {
+  useVisibleTask$(async () => {
 
   const fileInput = document.querySelector("#fileInput");
   fileInput?.addEventListener("change", (event:any) => {
